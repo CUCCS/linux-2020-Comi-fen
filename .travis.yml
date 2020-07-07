@@ -13,12 +13,12 @@ before_install:
 
 script:
         - bash chap0x04/shFile/picedit.sh -h
-        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -c 70%
-        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -r 90
-        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -w "Comi"
-        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -p "pre"
-        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -s "suf"
-        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -t
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic/ -c 70%
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic/ -r 90
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic/ -w "Comi"
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic/ -p "pre"
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic/ -s "suf"
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic/ -t
         - printf "\n"
         - bash chap0x04/shFile/worldcup.sh -h
         - bash chap0x04/shFile/worldcup.sh -a
