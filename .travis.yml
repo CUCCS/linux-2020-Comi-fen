@@ -6,10 +6,7 @@ before_install:
   - sudo apt update
   - sudo apt update -q
   - export scversion="stable" # or "v0.4.7", or "latest"
-  - wget "https://storage.googleapis.com/shellcheck/shellcheck-${scversion}.linux.x86_64.tar.xz"
-  - tar --xz -xvf shellcheck-"${scversion}".linux.x86_64.tar.xz
-  - sudo cp shellcheck-"${scversion}"/shellcheck /usr/bin/
-  - /usr/bin/shellcheck --version
+  - sudo apt-get install shellcheck
 
   - sudo apt-get install imagemagick
   - sudo apt install p7zip-full
