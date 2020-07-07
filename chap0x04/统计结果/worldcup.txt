@@ -1,0 +1,32 @@
+====== Statistical Age ======
+Age     Number  Rate
+<20     9       1.22%
+[20,30] 600     81.52%
+>30     1       0.14%
+
+====== Statistical Position ======
+Position        Number  Rate
+Midfielder      268     36.41%
+Défenseur       1       0.14%
+Defender        236     32.07%
+Goalie  96      13.04%
+Forward 135     18.34%
+
+====== Longest Name ======
+Francisco Javier Rodriguez
+Lazaros Christodoulopoulos
+Liassine Cadamuro-Bentaeba
+====== Shortest Name ======
+Jô
+
+====== Max Age ======
+Max age:42
+
+players:
+Faryd Mondragon
+====== Min Age ======
+Min age:18
+
+players:
+Fabrice Olinga
+Luke Shaw
