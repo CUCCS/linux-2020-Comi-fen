@@ -1,0 +1,54 @@
+sudo: required
+
+language: bash
+
+before_install:
+  - sudo apt update
+  - sudo apt update -q
+  - export scversion="stable" # or "v0.4.7", or "latest"
+  - wget "https://storage.googleapis.com/shellcheck/shellcheck-${scversion}.linux.x86_64.tar.xz"
+  - tar --xz -xvf shellcheck-"${scversion}".linux.x86_64.tar.xz
+  - sudo cp shellcheck-"${scversion}"/shellcheck /usr/bin/
+  - /usr/bin/shellcheck --version
+
+  - sudo apt-get install imagemagick
+  - sudo apt install p7zip-full
+
+script:
+        - bash chap0x04/shFile/picedit.sh -h
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -c 70%
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -r 90
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -w "Comi"
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -p "pre"
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -s "suf"
+        - bash chap0x04/shFile/picedit.sh -d chap0x04/Before_pic -t
+        - printf "\n"
+        - bash chap0x04/shFile/worldcup.sh -h
+        - bash chap0x04/shFile/worldcup.sh -a
+        - bash chap0x04/shFile/worldcup.sh -p
+        - bash chap0x04/shFile/worldcup.sh -n
+        - bash chap0x04/shFile/worldcup.sh -m
+        - printf "\n"
+        - bash chap0x04/shFile/web_log.sh -h
+        - bash chap0x04/shFile/web_log.sh -o
+        - bash chap0x04/shFile/web_log.sh -i
+        - bash chap0x04/shFile/web_log.sh -u
+        - bash chap0x04/shFile/web_log.sh -r
+        - bash chap0x04/shFile/web_log.sh -t
+        - bash chap0x04/shFile/web_log.sh -s "/images/NASA-logosmall.gif"
+
+after_script:
+  - /usr/bin/shellcheck chap0x04/shFile/picedit.sh
+  - /usr/bin/shellcheck chap0x04/shFile/worldcup.sh
+  - /usr/bin/shellcheck chap0x04/shFile/web_log.sh
+
+after_failure:
+  - id
+  - pwd
+  - df -h
+  - cat error.log
+ 
+notifications:
+  email:
+    on_success: never
+
